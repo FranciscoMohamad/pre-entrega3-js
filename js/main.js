@@ -49,6 +49,7 @@ const contenedorProductos = document.querySelector("#contenedor-productos")
 const botonNavegador = document.querySelectorAll(".boton-nav")
 const tituloPrincipal = document.querySelector("#Titulo")
 let botonAgregar = document.querySelectorAll(".producto-agregar")
+const numerito = document.querySelector("#numerito")
 
 
 //Creo una funcion que primero limpia el dom y luego genera los productos deseados
@@ -124,5 +125,11 @@ function agregarAlCarrito(e) {
         productoAgregado.cantidad = 1
         productosEnCarrito.push(productoAgregado)
     }
-    console.log(productosEnCarrito)
+    sumarNumerito()
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
+}
+
+function sumarNumerito() {
+    let numeroSumado = productosEnCarrito.reduce((acc, product) => acc + product.cantidad, 0)
+    numerito.innerText = numeroSumado
 }

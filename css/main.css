@@ -51,6 +51,15 @@ nav button {
     color: black;
 }
 
+.numerito {
+    background-color: orangered;
+    color: rgb(240, 237, 237);
+    padding: .2rem .3rem .2rem .2rem;
+    border-radius: .2rem;
+    margin-left: .5rem;
+    text-align: center;
+}
+
 nav ul {
     display: flex;
     align-items: center;
@@ -151,4 +160,95 @@ footer {
     color: white;
     background-color: orangered;
     text-align: center;
+}
+
+/*CARRITO*/
+
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrrito-vacio, 
+.carrito-comprado{
+    display: none;
+}
+.carrito-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrito-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(175, 168, 168);
+    color: orangered;
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto-img{
+        width: 4rem;
+        border-radius: 1rem;
+}
+
+.carrito-producto small {
+    font-size: .75rem;
+}
+
+.carrito-producto-eliminar {
+        border: 0;
+        background-color: transparent;
+        color: red;
+        cursor: pointer;
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-derecha {
+    display: flex;
+}
+
+.carrito-acciones-total{
+    display: flex;
+    background-color: grey;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: orangered;
+    text-transform: uppercase;
+    gap: 1rem;
+}
+
+.carrito-acciones-vaciar {
+    border: 0;
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: orangered;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carrito-acciones-comprar {
+    border: 0;
+    background-color: orangered;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: rgb(240, 237, 237);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.disabled {
+    display: none;
 }
