@@ -1,8 +1,9 @@
-                // Cambio de color
+// Cambio de color
 
 const colorModeButton = document.querySelector("#color-mode")
 const body = document.body
 const ul = document.querySelector("#lista")
+const hi = document.querySelector("#Titulo")
 let modoNocturno = localStorage.getItem("modo-nocturno")
 
                 //Funciones para activar/desactivar modo nocturno. Guardamos el dato en local storage
@@ -10,6 +11,7 @@ let modoNocturno = localStorage.getItem("modo-nocturno")
 function activarModoNocturno() {
     body.classList.add("dark-mode")
     ul.classList.add("dark-mode")
+    hi.classList.add("color-white")
     colorModeButton.classList.add("light-mode")
     colorModeButton.innerText = "Activar Modo Claro"
     localStorage.setItem("modo-nocturno", "activado")
@@ -18,6 +20,7 @@ function activarModoNocturno() {
 function desactivarModoNocturno() {
     body.classList.remove("dark-mode")
     ul.classList.remove("dark-mode")
+    hi.classList.remove("color-white")
     colorModeButton.classList.remove("light-mode")
     colorModeButton.innerText = "Activar Modo Nocturno"    
     localStorage.setItem("modo-nocturno", "desactivado")
@@ -111,7 +114,19 @@ function generarBotones() {
     })
 }
 
-const productosEnCarrito = []
+let productosEnCarrito
+let nuevoNumerito
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito")
+
+if (productosEnCarritoLS) {
+    productosEnCarrito = JSON.parse(productosEnCarritoLS)
+    sumarNumerito()
+}else {
+    productosEnCarrito = []
+}
+
+//funcion del boton agregar
 
 function agregarAlCarrito(e) {
 

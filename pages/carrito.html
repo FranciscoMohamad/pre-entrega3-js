@@ -37,37 +37,18 @@
             <p id="carrito-vacio" class="carrito-vacio">carrito vacio. <i class="bi bi-emoji-frown"></i></p>
 
             <div id="carrito-productos" class="carrito-productos disabled">
-                <div class="carrito-producto">
-                    <img class="carrito-producto-img" src="" alt="">
-                    <div class="carrito-producto-titulo">
-                        <small>titulo</small>
-                        <h3>abrigo 01</h3>
-                    </div>
-                    <div class="carrito-producto-cantidad">
-                        <small>cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="carrito-producto-precio">
-                        <small>precio</small>
-                        <p>$5000</p>
-                    </div>
-                    <div class="carrito-producto-subtotal">
-                        <small>subtotal</small>
-                        <p>$5000</p>
-                    </div>
-                    <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                </di>
+                <!--El contenido lo traemos desde js usando el local storage-->
             </div>
             <div id="carrito-acciones" class="carrito-acciones disabled">
                 <div class="carrito-acciones-izquierda">
-                    <button class="carrito-acciones-vaciar">vaciar carrito</button>
+                    <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">vaciar carrito</button>
                 </div>
                 <div class="carrito-acciones-derecha">
                     <div class="carrito-acciones-total">
                         <p>Total:</p>
                         <p id="total">$5000</p>
                     </div>
-                    <button class="acciones-carrito-comprar">Comprar Ahora</button>
+                    <button id="carrito-acciones-comprar" class="acciones-carrito-comprar">Comprar Ahora</button>
                 </div>
             </div>
             <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra<i class="bi bi-emoji-smile"></i></p>

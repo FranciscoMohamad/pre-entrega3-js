@@ -1,4 +1,4 @@
-        /*Estilos generales*/
+/*Estilos generales*/
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,8 @@
 
 html {
     font-size: 62.5%;
-    font-size: 1rem; }
+    font-size: 1rem;
+    height: 100%; }
 
 a {
     text-decoration: none;
@@ -16,12 +17,19 @@ a {
 
 body {
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 
 }
 
 h1 {
-  text-align: center;
-  margin: 1rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+h1.color-white {
+    color: aliceblue;
 }
 
         /*Navegador*/
@@ -32,6 +40,7 @@ nav {
     height: 5rem;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
 }
 nav button {
     background-color: black;
@@ -66,7 +75,6 @@ nav ul {
     transition: 0.5s;
     border-radius: 1rem;
     height: 3rem;
-    gap: 2rem;
     list-style: none;
 }
 
@@ -156,7 +164,7 @@ main{
 footer {
     position: sticky;
     bottom: 0;
-    width: 100%;
+    margin-top: auto;
     color: white;
     background-color: orangered;
     text-align: center;
@@ -169,12 +177,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 50%;
+    margin-top: 5rem;
 }
 
-.carrrito-vacio, 
-.carrito-comprado{
-    display: none;
-}
 .carrito-productos{
     display: flex;
     flex-direction: column;
@@ -184,8 +190,9 @@ footer {
 .carrito-producto{
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
-    background-color: rgb(175, 168, 168);
+    background-color: rgb(218, 208, 208);
     color: orangered;
     padding: .5rem;
     padding-right: 1.5rem;
@@ -198,7 +205,7 @@ footer {
 }
 
 .carrito-producto small {
-    font-size: .75rem;
+    font-size: 1rem;
 }
 
 .carrito-producto-eliminar {
@@ -206,6 +213,9 @@ footer {
         background-color: transparent;
         color: red;
         cursor: pointer;
+}
+.carrito-producto-cantidad {
+    margin: 0.1rem;
 }
 
 .carrito-acciones {
@@ -238,7 +248,8 @@ footer {
     cursor: pointer;
 }
 
-.carrito-acciones-comprar {
+.acciones-carrito-comprar {
+    text-align: center;
     border: 0;
     background-color: orangered;
     padding: 1rem;
