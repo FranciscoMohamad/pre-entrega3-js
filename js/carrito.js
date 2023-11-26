@@ -122,3 +122,12 @@ botonComprar.addEventListener ("click", () => {
         iconHtml: '<i class="bi bi-emoji-smile"></i>'
       })
 })
+
+botonVaciar.addEventListener ("click", () => {
+    Swal.fire({
+        title: 'carrito Vaciado!',
+        iconColor: 'green',
+        confirmButtonText: 'ACEPTAR',
+        iconHtml: '<i class="bi bi-emoji-smile"></i>'
+      })
+})
