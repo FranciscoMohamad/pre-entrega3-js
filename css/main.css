@@ -33,11 +33,15 @@ h1.color-white {
 }
 
         /*Navegador*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
 nav {
     display: flex;
     background-color: orangered;
-    height: 5rem;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
@@ -103,15 +107,6 @@ button.light-mode {
 
 main{
     display: flex;
-}
-    
-.carousel {
-    width: 50rem;
-    height: 60rem;
-    position: relative; 
-    display: inline-block;
-    background-color: orangered;
-    margin-left: 2rem;
 }
 
 /*Section*/
@@ -259,6 +254,15 @@ footer {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.carrito-comprado.color-white {
+    color: aliceblue;
+}
+
+.carrito-vacio.color-white {
+    color: aliceblue;
+}
+
 
 .disabled {
     display: none;

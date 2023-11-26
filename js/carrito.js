@@ -1,3 +1,4 @@
+
 //declaracion de lets y const
 
 let productosEnCarrito = localStorage.getItem("productos-en-carrito")
@@ -11,6 +12,8 @@ let botonesEliminar = document.querySelectorAll(".carrit-producto-eliminar")
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar")
 const botonComprar = document.querySelector("#carrito-acciones-comprar")
 const contenedorTotal = document.querySelector("#total")
+
+
 
 
 function cargarProductosCarrito () {
@@ -108,3 +111,14 @@ function actualizarTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, product)=> acc + (product.price * product.cantidad), 0)
     total.innerText =`$${totalCalculado}`
 }
+
+//Alerts con libreria
+
+botonComprar.addEventListener ("click", () => {
+    Swal.fire({
+        title: 'Muchas Gracias por su compra!',
+        iconColor: 'green',
+        confirmButtonText: 'ACEPTAR',
+        iconHtml: '<i class="bi bi-emoji-smile"></i>'
+      })
+})
